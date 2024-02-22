@@ -7,15 +7,31 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <h1><%= kindOfDay%></h1>
-        <ul>
-            <% for(var i = 0; i < newListItems.length ; i++){ %>
-            <li><%= newListItems[i] %></li>
-            <% } %>
-        </ul>
-        <form action="/" method="post">
-            <input type="text" name="newItem" id="nextItem" />
-            <button type="submit">Add Item</button>
-        </form>
+        <div class="box" id="heading">
+            <h1><%= kindOfDay%></h1>
+        </div>
+        <div class="box">
+            <div>
+                <% for(var i = 0; i < newListItems.length ; i++){ %>
+                <div class="item">
+                    <input type="checkbox" />
+                    <p><%= newListItems[i] %></p>
+                </div>
+
+                <% } %>
+
+                <form action="/" method="post">
+                    <input
+                        type="text"
+                        name="newItem"
+                        id="nextItem"
+                        placeholder="New Item"
+                        autofocus="true"
+                        autocomplete="off"
+                    />
+                    <button type="submit">+</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
