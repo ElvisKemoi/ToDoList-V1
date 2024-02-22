@@ -6,9 +6,7 @@ const bodyParser = require("body-parser");
 let list = ["Buy food.", "Cook food.", "Eat food.", "clearn dishes"];
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static("/public"));
-
-app.use(StaticRange("public"));
+app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
