@@ -27,6 +27,10 @@ app.get("/work", (req, res) => {
     res.render("list", { listTitle: "Work", newListItems: workItems });
 });
 
+app.get("/about", (req,res)=>{
+    res.render("about");
+})
+
 app.post("/", (req, res) => {
     let item = req.body.newItem;
     if (req.body.list === "Work") {
