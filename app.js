@@ -6,7 +6,7 @@ const _ = require("lodash");
 
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+// mongoose.connect();
 
 const itemsSchema = mongoose.Schema({
 	name: String,
